@@ -16,14 +16,10 @@ class Quiz extends Component {
     move = (e) => {
         let id = e.target.id;
         let index = 0;
-        if (id === 'first')
-            index = 0;
-        else if (id === 'prev')
-            index = this.props.pager.index - 1;
-        else if (id === 'next')
+        
+         if (id === 'next')
             index = this.props.pager.index + 1;
-        else if (id === 'last')
-            index = this.props.pager.count - 1;
+        
         else
             index = parseInt(e.target.id, 10);
 
